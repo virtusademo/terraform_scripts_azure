@@ -7,7 +7,7 @@ provider "azurerm" {
 }
 
 resource "azure_instance" "goserver" {
-  name                 = "DEMO_Go_Server"
+  name                 = "DEMOGoServer"
   hosted_service_name  = "${azure_hosted_service.terraform-service.name}"
   image                = "Ubuntu Server 14.04 LTS"
   size                 = "Basic_A1"
@@ -17,7 +17,7 @@ resource "azure_instance" "goserver" {
  }
  
  resource "azure_instance" "goagent" {
-  name                 = "DEMO_Go_Agent_Kubernetes"
+  name                 = "DEMOGoAgentKubernetes"
   hosted_service_name  = "${azure_hosted_service.terraform-service.name}"
   image                = "Ubuntu Server 14.04 LTS"
   size                 = "Basic_A1"
