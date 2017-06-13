@@ -8,11 +8,11 @@ provider "azurerm" {
 
 resource "azure_instance" "goserver" {
   name                 = "DEMO_Go_Server"
-    hosted_service_name  = "${azure_hosted_service.terraform-service.name}"
+  hosted_service_name  = "${azure_hosted_service.terraform-service.name}"
   image                = "Ubuntu Server 14.04 LTS"
   size                 = "Basic_A1"
-  storage_service_name = "yourstorage"
-  location             = "West US"
+  storage_service_name = "CloudPracticeTeam"
+  location             = "Southeast Asia"
   user_data_file = "userdata_goserver.sh"
  }
  
@@ -21,8 +21,8 @@ resource "azure_instance" "goserver" {
   hosted_service_name  = "${azure_hosted_service.terraform-service.name}"
   image                = "Ubuntu Server 14.04 LTS"
   size                 = "Basic_A1"
-  storage_service_name = "yourstorage"
-  location             = "West US"
+  storage_service_name = "CloudPracticeTeam"
+  location             = "Southeast Asia
   user_data_file = "userdata_gokube.sh"
  }
  
